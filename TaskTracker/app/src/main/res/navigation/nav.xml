@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/homePage">
+
+    <fragment
+        android:id="@+id/homePage"
+        android:name="com.example.TaskTracker.HomePage"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_homePage_to_taskList"
+            app:destination="@id/taskList" />
+        <action
+            android:id="@+id/action_homePage_to_toDoList"
+            app:destination="@id/toDoList" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskList"
+        android:name="com.example.TaskTracker.TaskList"
+        android:label="fragment_task_list"
+        tools:layout="@layout/fragment_task_list" >
+        <action
+            android:id="@+id/action_taskList_to_addTask"
+            app:destination="@id/addTask" />
+        <action
+            android:id="@+id/action_taskList_to_toDoList"
+            app:destination="@id/toDoList" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTask"
+        android:name="com.example.TaskTracker.AddTask"
+        android:label="fragment_add_task"
+        tools:layout="@layout/fragment_add_task" />
+    <fragment
+        android:id="@+id/toDoList"
+        android:name="com.example.TaskTracker.ToDoList"
+        android:label="fragment_to_do_list"
+        tools:layout="@layout/fragment_to_do_list" />
+</navigation>
